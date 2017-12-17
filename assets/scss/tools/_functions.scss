@@ -1,0 +1,29 @@
+/// Returns a color.
+/// @param {String} $color-name - Name of the color
+/// @param {String} $tone - The tone variant of the color
+/// @example scss
+///   color: color('yellow', 'shade');
+@function color($color-name, $tone: base) {
+  @return map-get(map-get($colors, $color-name), $tone);
+}
+
+/// Get z-layers.
+/// @param {String} $layer - Name of the layer.
+/// @example scss
+///   z-index: z('dropdown');
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn 'No layer found for `#{$layer}` in $z-layers map. Property omitted.';
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
+/// Returns a grid gutter or column width.
+/// @param {Number} $grid-columns - Total amount of columns in grid.
+/// @param {String} $context - The number you want.
+/// @example scss
+///   color: color('yellow', 'shade');
+@function grid($grid-columns, $context: column) {
+  @return map-get(map-get($grid, $grid-columns), $context);
+}

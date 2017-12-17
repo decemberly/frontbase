@@ -1,0 +1,20 @@
+# This file contains default .gitignore rules. Use it and it will cause
+# files like your settings.php and user-uploaded files to be
+# excluded from Git version control. This is a common strategy to avoid
+# accidentally including private information in public repositories and patch
+# files.
+
+# Development files
+*.pyc
+.DS_Store # mac-files
+.idea # php-storm editor
+*.sublime-workspace
+*.sublime-project
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+**/node_modules
+
+# Sass-cache and css.map
+**/.sass-cache
+**/*.css.map

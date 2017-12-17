@@ -1,0 +1,54 @@
+
+// Colors
+//
+// All colors used on the website.
+//
+// Markup: color-kss-markup.twig
+//
+// Weight: -1
+//
+// Group: Design
+//
+// Style guide: colors
+
+/// Map of colors.
+/// @see {function} color
+/// @type Map
+$colors: (
+  'black': (
+    light: #4a4a4a,
+    base: #222,
+    dark: #1a1a1a
+  ),
+  'white': (
+    base: #fff
+  ),
+  'grey': (
+    93: #eee,
+    88: #e0e0e0,
+    85: #d8d8d8,
+    76: #c3c3c3,
+    base: #a8a8a7,
+    61: #9b9b9b
+  ),
+  'blue': (
+    base: #2b86b0,
+    linkedin: #3498be
+  ),
+  'red': (
+    base: #a94442,
+    light: #f2dede
+  ),
+  'green': (
+    base: #00d48b
+  ),
+  'yellow': (
+    base: #fd0
+  ),
+  'pink': (
+    base: #fd375b
+  ),
+  'purple': (
+    base: #94618e
+  )
+);

@@ -1,0 +1,14 @@
+html {
+  font-family: $source-sans;
+  line-height: $root-line-height;
+  position: relative;
+  min-height: 100%;
+  padding: 0;
+  color: color('black');
+  background-color: color('white');
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+}

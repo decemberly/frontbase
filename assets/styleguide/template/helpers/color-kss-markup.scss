@@ -1,0 +1,32 @@
+@import '../../../scss/settings/colors';
+
+// Build the markup needed for the color section of the KSS style guide.
+@function color-kss-markup() {
+  $markup: '';
+
+  @each $color-key, $color-variants in $colors {
+    //$base-color-value: map-get($color-variants, 'base');
+    $markup: $markup + '<div class="kss-color__group">';
+
+    @each $variant-name, $variant-value in $color-variants {
+
+      $markup: $markup
+        + '<div class="kss-color__item" style="background-color: #{$variant-value};"><div class="kss-color__desc #{if((round((red($variant-value) * 299) + (green($variant-value) * 587) + (blue($variant-value) * 114) / 1000)) < 112979, '-light', '-dark')}">'
+        + '<div class="kss-color__name">#{$color-key} #{if($variant-name == 'base', '', $variant-name)}</div><br/>'
+        + '<input type="text" class="kss-color__code" id="#{$color-key}-#{$variant-name}" value="#{$variant-value}" readonly /></div>'
+        + '<button style="background-color: #{$variant-value};" data-copy="#{$color-key}-#{$variant-name}" class="js-kss-copy kss-color__button #{if((round((red($variant-value) * 299) + (green($variant-value) * 587) + (blue($variant-value) * 114) / 1000)) < 112979, '-light', '-dark')}">Copy hexcode</button></div>';
+    }
+
+    $markup: $markup + '</div>';
+  }
+
+  // Wrap
+  $markup: '<div class="kss__style kss-color">' + $markup + '</div>';
+  $markup: '<!-- This markup is auto-generated from Sass with color-kss-markup(). Do not modify. -->' + $markup;
+
+  @return $markup;
+}
+
+/*
+#{color-kss-markup()}
+*/

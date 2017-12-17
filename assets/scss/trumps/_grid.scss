@@ -1,0 +1,70 @@
+// Grid utilities
+//
+// Helpers for grid. Overrides all other properties with !important.
+// Should be avoided if possible.
+// The `@`-sign is used to determine at what breakpoint this grid is used.
+//
+
+/* Helper to see utility-classes /*
+/*[class^="u-"],
+[class*=" u-"] {
+  outline: 5px solid cyan;
+}*/
+
+/* stylelint-disable declaration-no-important */
+.u-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-left {
+  float: left;
+}
+
+.u-right {
+  float: right;
+}
+
+.u-clearfix {
+  @include clearfix;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-overflowHidden {
+  overflow: hidden;
+}
+
+.u-positionStatic {
+  position: static;
+}
+
+@include respond-to('xsmall-large') {
+  .u-centerAlign\@xsmall-large {
+    text-align: center;
+  }
+}
+
+@include respond-to('medium') {
+  .u-left\@medium {
+    float: left;
+  }
+}
+
+@include respond-to('large') {
+  .u-last\@large {
+    clear: none !important;
+    margin-right: 0 !important;
+  }
+
+  .u-left\@large {
+    float: left;
+  }
+
+  .u-right\@large {
+    float: right;
+  }
+}
+/* stylelint-enable declaration-no-important */

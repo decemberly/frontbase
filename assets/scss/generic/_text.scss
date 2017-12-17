@@ -1,0 +1,98 @@
+//
+// Text
+//
+
+// Remove the gray background color from links in IE 10+.
+a {
+  background: transparent;
+}
+
+// Address differences between Firefox and other browsers.
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+// Address variable `h1` font-size and margin within `section` and `article`
+// contexts in Chrome, Firefox and Safari.
+h1 {
+  font-size: 2em;
+  margin: 0.7em 0;
+}
+
+// Address weight set to `bolder` in Chrome and Safari.
+b,
+strong {
+  font-weight: bold;
+}
+
+// Address inconsistent and variable `font-size`.
+small {
+  font-size: 85%;
+}
+
+// Prevent `sub` and `sup` affecting `line-height`.
+sub,
+sup {
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.25em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// Address styling not present in Safari.
+dfn {
+  font-style: italic;
+}
+
+// Address styling not present in Chrome, Safari and IE 9.
+/* stylelint-disable selector-no-qualifying-type */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/* stylelint-enable selector-no-qualifying-type */
+
+// Address styling not present in IE 9.
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+// Remove redundant quotes.
+blockquote::before,
+blockquote::after {
+  content: '';
+}
+
+// Correct `font-family` set oddly in Chrome and Safari.
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 0.1em 0.3em;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+// Improve overflow and readability of preformatted text.
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+// Selection color
+::selection {
+  color: #fff;
+  background: #127fa8;
+}
