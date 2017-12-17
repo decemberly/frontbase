@@ -18,3 +18,6 @@
 # Sass-cache and css.map
 **/.sass-cache
 **/*.css.map
+
+# Generated directory
+public
